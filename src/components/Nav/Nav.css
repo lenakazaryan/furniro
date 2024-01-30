@@ -1,0 +1,40 @@
+.nav-container {
+    max-width: 1808px;
+    margin: 0 auto;
+    margin-top: 38px;
+    padding-bottom: 44px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    place-items: center;
+    justify-content: space-between;  
+}
+
+.nav_menu {
+    font-size: var(--font-size-xs);
+    font-weight: var(--weight-medium);
+}
+
+.nav_menu > ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 75px;
+}
+
+.nav_menu > ul > li {
+    list-style-type: none;
+
+}
+
+.nav_icon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+}
+
+.nav_menu > ul > li > a {
+   text-decoration: none;
+}
