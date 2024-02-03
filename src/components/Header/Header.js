@@ -1,6 +1,5 @@
 import { ReactComponent as ArrowRight } from "../../assests/icons/arrow_right.svg";
 
-
 import "./Header.css";
 
 const Header = () => {

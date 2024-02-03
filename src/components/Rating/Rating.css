@@ -1,0 +1,38 @@
+/* css--------------- */
+   /* .rating {
+    font-size: 0; 
+    overflow: hidden;
+  }
+  
+  .star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assests/icons/star-icon-svg-27.jpg');
+    background-size: cover;
+  }
+  
+  .full {
+    background-position: 0 0; 
+  }
+  
+  .half {
+    width: 10px;
+  } */
+
+
+  /* react--------------- */
+  
+  .starDiv {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assests/icons/star-icon-svg-27.jpg');
+    background-size: cover;
+  }
+
+  .rating_content {
+    display: flex;
+    gap: 2px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }

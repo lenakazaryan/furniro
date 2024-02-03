@@ -1,78 +1,30 @@
-import cart1 from "../../assests/images/cart1.svg";
+import { RELATED_PRODUCTS } from "../../helpers/constants";
+import RelatedItem from "./RelatedItem/Related";
 
 import "./RelatedProducts.css";
 
 const RelatedProducts = () => {
   return (
-    <div className="relatedProducts_container">
+    <div className="relatedProducts_container" >
+      <div className="relatedProducts">
       <p>Related Products</p>
       <div className="relatedProducts_carts_container">
-      <div className="relatedProducts">
-        <div className="relatedProducts_cart">
-          <img src={cart1} />
-          <div className="relatedProducts_cart_titles_container">
-            <div className="relatedProducts_cart_titles">
-              <span>Syltherine</span>
-              <span>Styish cafe chair</span>
-            </div>
-            <div className="relatedProducts_cart_titles_price">
-              <span>Rp 2.500.000</span>
-              <span>Rp 3.500.000</span>
-            </div>
-          </div>
+        {RELATED_PRODUCTS.map((item) => (
+          <RelatedItem
+            key={item.title}
+            icon={item.icon}
+            src={item.src}
+            title={item.title}
+            description={item.description}
+            price={item.price}
+            discount={item.discount}
+          />
+        ))}
+      </div>
+      <div className="relatedProducts_button_container">
+          <button className="relatedProducts_button">Show More</button>
         </div>
-      </div>
-
-      <div className="relatedProducts">
-        <div className="relatedProducts_cart">
-          <img src={cart1} />
-          <div className="relatedProducts_cart_titles_container">
-            <div className="relatedProducts_cart_titles">
-              <span>Syltherine</span>
-              <span>Styish cafe chair</span>
-            </div>
-            <div className="relatedProducts_cart_titles_price">
-              <span>Rp 2.500.000</span>
-              <span>Rp 3.500.000</span>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div className="relatedProducts">
-        <div className="relatedProducts_cart">
-          <img src={cart1} />
-          <div className="relatedProducts_cart_titles_container">
-            <div className="relatedProducts_cart_titles">
-              <span>Syltherine</span>
-              <span>Styish cafe chair</span>
-            </div>
-            <div className="relatedProducts_cart_titles_price">
-              <span>Rp 2.500.000</span>
-              <span>Rp 3.500.000</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="relatedProducts">
-        <div className="relatedProducts_cart">
-          <img src={cart1} />
-          <div className="relatedProducts_cart_titles_container">
-            <div className="relatedProducts_cart_titles">
-              <span>Syltherine</span>
-              <span>Styish cafe chair</span>
-            </div>
-            <div className="relatedProducts_cart_titles_price">
-              <span>Rp 2.500.000</span>
-              <span>Rp 3.500.000</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-      </div>
     </div>
   );
 };

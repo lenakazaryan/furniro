@@ -48,3 +48,21 @@ header {
     font-size: var( --font-size-xs);
     width: 108px;
 }
+
+@media only screen and (max-width: 375px) {
+    .header_container {
+        gap:5px;
+        padding: 5px;
+        margin-left: 10px !important;
+    }
+
+    .header_home > svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header_shop > svg {
+        width: 20px;
+        height: 20px;
+    }
+  }

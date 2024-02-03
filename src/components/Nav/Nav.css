@@ -1,11 +1,7 @@
 .nav-container {
     max-width: 1808px;
-    margin: 0 auto;
     margin-top: 38px;
     padding-bottom: 44px;
-}
-
-nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -38,3 +34,34 @@ nav {
 .nav_menu > ul > li > a {
    text-decoration: none;
 }
+
+.burgerMenu {
+    display: none;
+}
+
+
+@media only screen and (max-width: 375px) {
+    .nav_menu{
+        display: none;
+    }
+
+    .nav_icon {
+        display: none;
+    }
+
+    svg {
+        width: 100px; /* Default width */
+        height: 100px; /* Default height */
+    }
+
+    .nav-container {
+        margin-top: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        place-items: start;
+    }
+
+    .burgerMenu {
+        display: block;
+    }
+  }

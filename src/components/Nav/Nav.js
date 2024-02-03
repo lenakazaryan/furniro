@@ -1,14 +1,20 @@
-import { ReactComponent as Logo } from "../../assests/images/logo.svg";
 import { MENU } from "../../helpers/constants";
 import { ICONS } from "../../helpers/constants";
+
+import { ReactComponent as Logo } from "../../assests/images/logo.svg";
+import BurgerMenu from "../BurgerMenu";
+
 
 import "./Nav.css";
 
 const Nav = () => {
   return (
-    <nav className="nav-container">
+    <div className="nav-container">
       <div className="nav_logo">
         <Logo />
+      </div>
+      <div className="burgerMenu">
+      <BurgerMenu/>
       </div>
       <div className="nav_menu">
         <ul>
@@ -24,7 +30,8 @@ const Nav = () => {
           <div key={item.id}>{item.icon}</div>
         ))}
       </div>
-    </nav>
+    </div>
+   
   );
 };
 
