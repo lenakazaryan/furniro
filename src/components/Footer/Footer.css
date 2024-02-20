@@ -12,8 +12,6 @@ footer {
     border-bottom: 1px solid var(--color-secondary);
 }
 
-
-
 .footer_location_details {
   font-size: var(--font-size-xs);
   color: var(--color-secondary);
@@ -33,49 +31,49 @@ footer {
     list-style-type: none;
 }
 
-.footer_links > li:first-child {
+.footer_links_item:first-child {
   color: var(--color-secondary);
 }
 
-
-.footer_contact {
-    display: grid;
-    width: 100%;
-    grid-template-areas:
-    "footer_newsLetter footer_newsLetter "
-    "footer_email footer_subscribe"
-    "footer_email footer_subscribe";
-    grid-template-rows: 50px 1fr 30px;
-    grid-template-columns: 200px 1fr;
-}
-  
 .footer_newsLetter {
-    grid-area: footer_newsLetter;
     color: var(--color-secondary);
     font-size: var(--font-size-xs);
     font-weight: var(--weight-medium);
 }
   
 .footer_email {
-    grid-area: footer_email;
     color: var(--color-secondary);
     text-decoration: underline;
-    text-underline-offset: 10px;
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-xxs);   
+}
+
+.email {
+    border: none;
+    outline: none;
 }
   
 .footer_subscribe {
-    grid-area: footer_subscribe;
     font-size: var(--font-size-xxs);
     font-weight: var(--weight-medium);
     text-decoration: underline;
-    text-underline-offset: 10px;
+    outline: none;
+    border: none;
+    background-color: white;
 }
 
 .footer_rights {
   margin-top: 35px;
   font-size: var(--font-size-xs);
 }
+
+.footer_contact_items {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+
 @media only screen and (max-width: 375px) {
   footer {
     grid-template-columns: 1fr;
@@ -83,14 +81,26 @@ footer {
 
   .footer_contact {
     display: grid;
-    grid-template-columns: 1fr;;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    padding: 10px;
   }
 
   .footer_location_details{
     display: flex;
     flex-direction: column;
     padding: 10px;
+  }
+
+  .footer_rights {
+    padding: 3px 15px;
+  }
+
+  .footer_location_details_title{
+    margin-left: 16px;
+  }
+
+  .footer_links {
+    padding: 16px;
   }
 }
 

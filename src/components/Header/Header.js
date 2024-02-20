@@ -8,11 +8,11 @@ const Header = () => {
       <div className="header_container">
         <div className="header_home">
           <span >Home</span>
-          <ArrowRight />
+          <ArrowRight className="arrow_right_icon" />
         </div>
         <div className="header_shop">
           <span>Shop</span>
-          <ArrowRight />
+          <ArrowRight className="arrow_right_icon" />
         </div>
         <span className="divider"></span>
         <span className="header_text">Asgaard sofa</span>

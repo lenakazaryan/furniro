@@ -40,6 +40,10 @@
    .description_images_container > img {
     max-width: 250px;
     }
+
+    .description {
+      padding: 16px;
+  }
   }
 
  

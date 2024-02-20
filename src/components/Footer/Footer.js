@@ -5,7 +5,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer_container">
-    <footer>
+      <footer>
         <div>
           <span className="footer_location_details_title">Furniro.</span>
           <div className="footer_location_details">
@@ -14,24 +14,33 @@ const Footer = () => {
             <span> FL 33134 USA</span>
           </div>
         </div>
-      <ul className="footer_links">
-        {LINKS.map((item) => (
-          <li key={item.page}>{item.page}</li>
-        ))}
-      </ul>
-      <ul className="footer_links">
-        {HELP.map((item) => (
-          <li key={item.page}>{item.page}</li>
-        ))}
-      </ul>
-      <div className="footer_contact">
-        <span className="footer_newsLetter">Newsletter</span>
-        <span className="footer_email">Enter Your Email Address</span>
-        <span className="footer_subscribe">SUBSCRIBE</span>
-      </div>
+        <ul className="footer_links">
+          {LINKS.map((item) => (
+            <li className="footer_links_item" key={item.page}>{item.page}</li>
+          ))}
+        </ul>
+        <ul className="footer_links">
+          {HELP.map((item) => (
+            <li className="footer_links_item" key={item.page}>{item.page}</li>
+          ))}
+        </ul>
       
-    </footer>
-    <p className="footer_rights">2023 furino. All rights reverved</p>
+          <form className="footer_contact">
+            <h2 className="footer_newsLetter">Newsletter</h2>
+            <div className="footer_contact_items">
+              <label className="footer_email">
+                Enter Your Email Address
+                <input className="email" type="text" name="email" />
+              </label>
+              <input
+                className="footer_subscribe"
+                type="submit"
+                value="SUBSCRIBE"
+              />
+              </div>
+          </form>
+      </footer>
+      <p className="footer_rights">2023 furino. All rights reverved</p>
     </div>
   );
 };

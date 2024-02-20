@@ -9,14 +9,14 @@ import "./ProductSpecification.css";
 
 const ProductSpecification = () => {
   return (
-    <div>
+    <div className="prodict_container">
       <div className="product">
         <div className="product_item">
           <div className="product_item_small">
-            <img src={ProductSmall} />
-            <img src={ProductSmall} />
-            <img src={ProductSmall} />
-            <img src={ProductSmall} />
+            <img className="product_item_small_img" src={ProductSmall} />
+            <img className="product_item_small_img" src={ProductSmall} />
+            <img className="product_item_small_img" src={ProductSmall} />
+            <img className="product_item_small_img" src={ProductSmall} />
           </div>
           <div className="product_item_large">
             <img className="product_item_large_image" src={Product} />
@@ -40,17 +40,17 @@ const ProductSpecification = () => {
           <div>
             <p className="product_size_title">Size</p>
             <div className="product_sizes">
-              <div>L</div>
-              <div>XL</div>
-              <div>XS</div>
+              <div className="product_size">L</div>
+              <div className="product_size">XL</div>
+              <div className="product_size">XS</div>
             </div>
           </div>
           <div className="product_color">
             <p className="product_color_title">Color</p>
-            <div className="product_colors">
-              <div></div>
-              <div></div>
-              <div></div>
+            <div className="product_colors_container">
+              <div className="product_color1"></div>
+              <div className="product_color2"></div>
+              <div className="product_color3"></div>
             </div>
           </div>
           <div className="product_buttons">
@@ -67,31 +67,31 @@ const ProductSpecification = () => {
           </div>
           <div className="product_border"></div>
         </div>
+      </div>
 
-        <div className="product-info_container">
-          <div className="product-info">
-            <ul>
-              {Object.keys(myObject).map((key) => (
-                <li key={key}>
-                  <div>{key}</div>
-                  <div>
-                    {key === "Share" ? (
-                      <div className="share-icons">
-                        :
-                        {myObject[key].map((icon, index) => (
-                          <div key={index} className="facebook-icon-wrapper">
-                            {icon}
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      myObject[key]
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="product-info_container">
+        <div className="product-info">
+          <ul >
+            {Object.keys(myObject).map((key) => (
+              <li className="product-info_list_item" key={key}>
+                <div className="product-info_list_key">{key}</div>
+                <div>
+                  {key === "Share" ? (
+                    <div className="share-icons">
+                      :
+                      {myObject[key].map((icon, index) => (
+                        <div key={index} className="facebook-icon-wrapper">
+                          {icon}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    myObject[key]
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
